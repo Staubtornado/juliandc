@@ -108,7 +108,7 @@ class Spotify():
     def getArtist(self, id):
         return sp.artist(id)['name']
 
-yt_api = pyyoutube.Api(api_key = 'AIzaSyCr50qECqFP5yzD8acLLJy4zpuZ4KhRe7M')
+yt_api = pyyoutube.Api(api_key = os.environ['YOUTUBE_API_KEY'])
 
 class YouTubeAPI():
     def getPlaylistItems(self, id):
